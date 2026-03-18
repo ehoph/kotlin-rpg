@@ -1,0 +1,62 @@
+/*
+ * este sistema serve para simular um criador de personagem de RPG
+*/
+
+fun main() {
+println("Bem-vindo ao Criador de Personagens RPG!")
+print("Inicializando sistema de criação... ")
+// println faz com que imprima oq escreveu porem com um pulo de linha
+    println("[OK]")
+    val ano = 1977
+   
+    
+    //ano = 1988
+    // com val nn podemos trocar o valor pois é imutavel
+    
+    var idade: Int = 20
+    idade = 21
+    
+    
+    var nivelPersonagem: Int = 1
+    
+    val classePersonagem = "Assassino"
+    var pontosMana = false
+    
+    
+    //pontosMana = "Mana Média"
+    
+    
+    var pontosVida : Int = 100
+    var ouroAcumulado: Long = 5_000_000_000L
+    var taxaAcerto: Float = 95.5f
+    var multiplicadorDano: Double = 1.5555
+    var estaVivo = true
+    val nomePersonagem = "PHZIN"
+    
+    val tituloPersonagem = ("$nomePersonagem "+ ",o $classePersonagem")
+    
+    println(tituloPersonagem)
+    
+    println("O personagem $nomePersonagem tem ${idade + 5} anos e possui ${ouroAcumulado / 1000}k moedas de ouro.")
+    
+    var novoOuro = 500 
+    ouroAcumulado = novoOuro + ouroAcumulado
+    var pocao = 50
+    ouroAcumulado = ouroAcumulado - pocao
+    
+    var novoPontoVida = pontosVida * 2 
+    
+    println(nivelPersonagem % 2 )
+    
+    nivelPersonagem++
+    idade+=10
+    pontosVida = 15
+    
+    println("O personagem $nomePersonagem está no nível $nivelPersonagem, tem ${idade + 5} anos, possui $pontosVida pontos de vida e possui ${ouroAcumulado / 1000}k moedas de ouro.")
+    
+   exibirStatus()
+    
+}
+
+fun exibirStatus(){println("--- Status Atualizado do Personagem ---")}
+
