@@ -1,3 +1,4 @@
+
 /*
  * este sistema serve para simular um criador de personagem de RPG
 */
@@ -55,8 +56,35 @@ print("Inicializando sistema de criação... ")
     println("O personagem $nomePersonagem está no nível $nivelPersonagem, tem ${idade + 5} anos, possui $pontosVida pontos de vida e possui ${ouroAcumulado / 1000}k moedas de ouro.")
     
    exibirStatus()
+   registrarDano(valorDano = 25)
+   val poder = calcularPoderTotal(7,1.5)
+   println("O seu poder é $poder")
+    calcularPoderTotal( multiplicador = 1.5, nivel = 7)
+    usarHabilidade("Bola de Fogo", 25)
+    usarHabilidade("Cura divina", 25)
+   salvarJogo()
     
 }
+
+fun exibirStatus(){println("--- Status Atualizado do Personagem ---")}
+
+fun registrarDano(valorDano: Int){
+println("Aviso: O personagem sofreu $valorDano pontos de dano!")}
+
+fun calcularPoderTotal(nivel: Int, multiplicador: Double): Double {
+  return nivel * multiplicador
+}
+
+fun isNivelAlto(nivel: Int): Boolean = nivel >= 10
+  
+fun usarHabilidade(nomeHabilidade: String, custoMana: Int = 10){
+    println("Usou $nomeHabilidade e custou $custoMana de mana")
+}
+// Unit é opcional, mas ajuda a documentar que a função não retorna um valor útil.
+ fun salvarJogo(): Unit{
+    println("Progresso salvo. Até a próxima aventura!")
+}
+
 
 fun exibirStatus(){println("--- Status Atualizado do Personagem ---")}
 
